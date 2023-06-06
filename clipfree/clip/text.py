@@ -25,7 +25,7 @@ import torch
 from loguru import logger
 
 from clipfree.cache import Cache
-from hordelib.utils.cast import autocast_cuda
+from clipfree.utils.cast import autocast_cuda
 
 
 class TextEmbed:

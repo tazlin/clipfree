@@ -28,7 +28,7 @@ from loguru import logger
 from PIL import Image
 
 from clipfree.cache import Cache
-from hordelib.utils.cast import autocast_cuda
+from clipfree.utils.cast import autocast_cuda
 
 
 class ImageEmbed:

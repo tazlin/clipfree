@@ -10,7 +10,7 @@ from typing_extensions import override
 from hordelib.config_path import get_hordelib_path
 from hordelib.consts import MODEL_CATEGORY_NAMES, MODEL_DB_NAMES
 from hordelib.model_manager.base import BaseModelManager
-from hordelib.utils.blip.blip import blip_decoder
+from clipfree.utils.blip.blip import blip_decoder
 
 
 class BlipModelManager(BaseModelManager):
