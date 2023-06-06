@@ -25,8 +25,8 @@ from PIL import Image
 from tqdm import tqdm
 
 from clipfree.cache import Cache
-from hordelib.clip.image import ImageEmbed
-from hordelib.model_manager.clip import ClipModelManager
+from clipfree.clip.image import ImageEmbed
+from clipfree.model_manager.clip import ClipModelManager
 from hordelib.settings import UserSettings
 
 

@@ -25,8 +25,8 @@ from loguru import logger
 from PIL import Image
 
 from clipfree.cache import Cache
-from hordelib.clip.image import ImageEmbed
-from hordelib.clip.text import TextEmbed
+from clipfree.clip.image import ImageEmbed
+from clipfree.clip.text import TextEmbed
 
 
 class Interrogator:
