@@ -24,7 +24,7 @@ import torch
 from loguru import logger
 from PIL import Image
 
-from hordelib.cache import Cache
+from clipfee.cache import Cache
 from hordelib.clip.image import ImageEmbed
 from hordelib.clip.text import TextEmbed
 

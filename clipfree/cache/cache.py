@@ -45,7 +45,7 @@ def get_cache_directory():
             "XDG_CACHE_HOME",
             os.path.join(Path.home(), ".cache/"),
         )
-    return os.path.join(base_dir, "nataili")
+    return os.path.join(base_dir, "clip_cache")
 
 
 class Cache:
