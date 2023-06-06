@@ -8,7 +8,7 @@ import torch
 from loguru import logger
 from typing_extensions import override
 
-from hordelib.config_path import get_hordelib_path
+from clipfree.config_path import get_clipfree_path
 from hordelib.consts import MODEL_CATEGORY_NAMES, MODEL_DB_NAMES
 from hordelib.model_manager.base import BaseModelManager
 
@@ -22,7 +22,7 @@ class ClipModelManager(BaseModelManager):
 
     def load_ranking_lists(self):
         ranking_lists = {}
-        ranking_lists_path = Path(get_hordelib_path()).joinpath(
+        ranking_lists_path = Path(get_clipfree_path()).joinpath(
             "clip/",
             "ranking_lists/",
         )
