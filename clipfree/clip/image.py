@@ -27,7 +27,7 @@ import torch
 from loguru import logger
 from PIL import Image
 
-from clipfee.cache import Cache
+from clipfree.cache import Cache
 from hordelib.utils.cast import autocast_cuda
 
 

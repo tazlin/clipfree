@@ -24,7 +24,7 @@ from loguru import logger
 from PIL import Image
 from tqdm import tqdm
 
-from clipfee.cache import Cache
+from clipfree.cache import Cache
 from hordelib.clip.image import ImageEmbed
 from hordelib.model_manager.clip import ClipModelManager
 from hordelib.settings import UserSettings
