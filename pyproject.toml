@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "clipfree"
-description = "A thin wrapper around ComfyUI to allow use by AI Horde."
+description = "Workaround hlky abuse of DMCA"
 authors = [
     {name = "db0", email = "mail@dbzer0.com"},
 ]
