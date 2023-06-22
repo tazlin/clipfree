@@ -84,12 +84,14 @@ class Interrogator:
         # logger.debug(f"Loading {key} embeds")
         if individual:
             self.embed_lists[key] = {}
+            num_indv_embeds = len(text_array)
+            logger.debug(f"Loading {num_indv_embeds} individual embeds")
             for text in text_array:
                 text_hash = hashlib.sha256(text.encode("utf-8")).hexdigest()
                 filename = f"{self.cache.cache_dir}/{text_hash}.npy"
-                logger.debug(
-                    f"text: {text}, text_hash: {text_hash}, filename: {filename}",
-                )
+                # logger.debug(
+                # f"text: {text}, text_hash: {text_hash}, filename: {filename}",
+                # )
                 embed = torch.from_numpy(np.load(filename)).float().to(device)
                 if len(embed.shape) == 1:
                     embed = embed.view(1, -1)
@@ -97,12 +99,14 @@ class Interrogator:
         else:
             with torch.no_grad():
                 text_features = []
+                num_embeds = len(text_array)
+                logger.debug(f"Loading {num_embeds} embeds")
                 for text in text_array:
                     text_hash = hashlib.sha256(text.encode("utf-8")).hexdigest()
                     filename = f"{self.cache.cache_dir}/{text_hash}.npy"
-                    logger.debug(
-                        f"text: {text}, text_hash: {text_hash}, filename: {filename}",
-                    )
+                    # logger.debug(
+                    #    f"text: {text}, text_hash: {text_hash}, filename: {filename}",
+                    # )
                     embed = torch.from_numpy(np.load(filename)).float().to(device)
                     if len(embed.shape) == 1:
                         embed = embed.view(1, -1)

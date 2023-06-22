@@ -16,7 +16,7 @@ from hordelib.model_manager.base import BaseModelManager
 class ClipModelManager(BaseModelManager):
     def __init__(self, download_reference=False):
         super().__init__(
-            models_db_name=MODEL_DB_NAMES[MODEL_CATEGORY_NAMES.clip],
+            model_category_name=MODEL_CATEGORY_NAMES.clip,
             download_reference=download_reference,
         )
 
@@ -127,7 +127,7 @@ class ClipModelManager(BaseModelManager):
         if not self.cuda_available:
             cpu_only = True
         tic = time.time()
-        logger.init(f"{model_name}", status="Loading")  # logger.init
+        logger.info(f"Loading {model_name}")
         if self.model_reference[model_name]["type"] == "open_clip":
             loaded_model_info = self.load_open_clip(
                 model_name,
@@ -158,15 +158,12 @@ class ClipModelManager(BaseModelManager):
             )
             return {}  # XXX # FIXME
         if not loaded_model_info:
-            logger.init_err(f"Failed to load {model_name}", status="Error")
+            logger.error(f"Failed to load {model_name}")
             return {}  # XXX # FIXME
 
-        logger.init_ok(f"Loading {model_name}", status="Success")  # logger.init_ok
+        logger.info(f"Loading {model_name}")
         toc = time.time()
-        logger.init_ok(
-            f"Loading {model_name}: Took {toc-tic} seconds",
-            status="Success",
-        )  # logger.init_ok
+        logger.info(f"Loading {model_name}: Took {toc-tic} seconds")
         return loaded_model_info
 
 

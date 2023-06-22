@@ -16,7 +16,7 @@ from clipfree.utils.blip.blip import blip_decoder
 class BlipModelManager(BaseModelManager):
     def __init__(self, download_reference=False):
         super().__init__(
-            models_db_name=MODEL_DB_NAMES[MODEL_CATEGORY_NAMES.blip],
+            model_category_name=MODEL_CATEGORY_NAMES.blip,
             download_reference=download_reference,
         )
 

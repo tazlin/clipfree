@@ -3,7 +3,7 @@ requires = ["setuptools", "setuptools-scm"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "clipfree"
+name = "horde_clipfree"
 description = "Workaround hlky abuse of DMCA"
 authors = [
     {name = "db0", email = "mail@dbzer0.com"},
@@ -17,10 +17,8 @@ classifiers = [
     "Operating System :: OS Independent",
     "Development Status :: 2 - Pre-Alpha",
 ]
+version= "0.0.2"
 
-# Don't specify dynamic deps for tox, only for build
-dynamic=["version"]
-#dynamic=["version", "dependencies"]
 
 [project.urls]
 "Homepage" = "https://github.com/db0/clipfree"
@@ -28,10 +26,6 @@ dynamic=["version"]
 [tool.setuptools]
 license-files = ["LICENSE", "CHANGELOG*"]
 
-[tool.setuptools_scm]
-# Don't create a _version file in development mode
-# We uncomment this automatically at build time.
-#write_to = "clipfree/_version.py"
 
 [tool.setuptools.dynamic]
 dependencies = {file = ["requirements.txt"]}
